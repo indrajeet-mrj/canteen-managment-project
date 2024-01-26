@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: black;
+            padding: 50px;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
+            
+            border: 2px solid wheat;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+        }
+        form{
+            height: 500px;
+            width: 400px;
+            background: transparent;
+            box-shadow: inset 0px 0px 10px #7c7c7c;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 100px 30px;
+        }
+        form img{
+            height: 80px;
+        }
+        form .icon{
+            height: 50px;
+            width: 120px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        form .icon img{
+            height: 30px;
+        }
+        form .icon img:nth-child(2){
+            height: 30px;
+        }
+        form .icon img:nth-child(3){
+            height: 40px;
+        }
+        input,button{
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+            padding: 0px 20px;
+            background: transparent;
+            border: none;
+            box-shadow: inset 0px 0px 5px #4c4b4b;
+            color:#fff;
+            outline: none;
+            font-size: 14px;
+        }
+        input::placeholder{
+            color: #e10f0f;
+        }
+        button{
+            width: 100px;
+            background: #e10f0f;
+            color: #000;
+            cursor: pointer;
+        }
+        @media (max-width:600px) {
+            form{
+            height: 500px;
+            width: 300px;
+           
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            padding: 10px;
+            border-radius: 15px;
+           
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: black;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="home-page.html">
+            <img src="avatar.png" alt="">
+            <input type="email" placeholder="Email id" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div class="icon">
+                <img src="facebook.png" alt="">
+                <img src="google.png" alt="">
+                <img src="linkedin.png" alt="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
