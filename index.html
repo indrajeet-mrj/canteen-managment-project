@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Salsa&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            padding: 50px;
+            background: #000;
+        }
+        .container{
+            height: 175vh;
+            width: 100%;
+            background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid white;
+        }
+        .canteen-logo{
+            /* outline: 2px solid #e10f0f; */
+            height: 40px;
+            width: 210px;
+            align-items: center;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .canteen-logo h1{
+            color: #fff;
+            font-size: 30px;
+        }
+        .canteen-logo h1 samp{
+             font-size: 30px;
+            color: #e10f0f;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-ele ul{
+            width: 300px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 17px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .sign button{
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            background: linear-gradient(to top left ,red,rgb(164, 33, 33),red);
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .main-el{
+            height: 300px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .main-ele{
+            height: 300px;
+            width: 50%;
+            margin-top: 50px;
+        }
+        .main-ele img{
+
+            height: 300px;
+            margin-left: 50px;
+        }
+        .main-ele h1{
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Salsa', cursive;
+            color: #fff;
+            font-size: 40px;
+            margin-top: 50px;
+        }
+        .but{
+            height: 80px;
+            width: 250px;
+            align-items: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+        }
+        .but button{
+            height: 40px;
+            width: 110px;
+            background: linear-gradient(to top left ,red,rgb(162, 34, 34),red);
+            color: #fff;
+            font-size: 14px;
+            border-radius: 20px;
+            border: none;
+            padding: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .but button:nth-child(2){
+            background: #fff;
+            color: black;
+            font-weight: 600;
+        }
+        .food{
+            height: 250px;
+            width: 100%;
+            margin-top:100px;
+        }
+        .food-info{
+            margin-top: 50px;
+        }
+        .food-info img{
+            height: 150px;
+            position: absolute;
+            z-index: 1;
+            margin-top: -65px;
+        }
+        .food-ele{
+            height: 180px;
+            width: 150px;
+            position: absolute;
+            z-index: 0;
+            background-color: #000000;
+            border-radius: 30px;
+            padding: 10PX;
+            display: grid;
+            place-items: center;
+            box-shadow: inset 0px 0px 8px #4c4b4b ;
+            color: #fff;
+        }
+        .food-ele H1{
+            height: 40px;
+            width: 100px;
+            margin-top: 70px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .food-info:nth-child(1){
+            margin-left: 50px;
+        }
+        .food-info:nth-child(2){
+            margin-left: 250px;
+        }
+        .food-info:nth-child(2) img{
+            height: 150px;
+            position: absolute;
+            z-index: 1;
+            margin-left: -20px;
+            margin-top: -65px;
+        }
+        .food-info:nth-child(3){
+            margin-left: 450px;
+        }
+        .food-info:nth-child(3) img{
+            height: 170px;
+            position: absolute;
+            z-index: 1;
+            margin-top: -80px;
+        }
+        .food-info:nth-child(4){
+            margin-left: 650px;
+        }
+        .food-info:nth-child(4) img{
+            height: 110px;
+            position: absolute;
+            z-index: 1;
+            margin-top: -65px;
+        }
+        /* .food-info:nth-child(5){
+            margin-left: 800px;
+        } */
+        .price{
+            margin-top: 0px;
+            height: 40px;
+            width: 120px;
+            align-items: center;
+            display: flex;
+            padding: 0px 10px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .price h5{
+            color: #e10f0f;
+        }
+        .cart{
+            height: 40px;
+            width: 40px;
+            background: #e10f0f;
+            border-radius: 10px 10px 20px 10px;
+            padding: 6px;
+        }
+        .cart img{
+            height: 25px;
+            margin: 0;
+        }
+        .cart:nth-child(2) img{
+            height: 25px;
+            margin: 0;
+        }
+        .footer{
+            padding:10px 50px;
+            color: #fff;
+            font-size: 15px;
+            border-top: 2px solid #fff;
+        }
+        .footer samp{
+            color: #e10f0f;
+        }
+        .footer samp a{
+            color: #e10f0f;
+            text-decoration: none;
+        }
+        @media (max-width:500px) {
+            body{
+            padding: 20px;
+        }
+        .container{
+            height: 190vh;
+            padding: 10px;
+        }
+        .main-el{
+            flex-direction:column;
+        }
+        .main-ele img{
+            height: 300px;
+            margin-top: -470px;
+            margin-left: 30px;
+        }
+        .main-ele h1{
+            margin-left: 50px;
+            margin-top: 380px;
+        }
+        .but{
+            margin-left: 40px;
+             /* margin-top: 400px; */
+        }
+        .header{
+            height: 200px;
+            width: 100%;
+            flex-direction: column;
+        }
+        .food{
+            height: 500px;
+            display: flex;
+            margin-top: 550px;
+            flex-wrap: wrap;
+        }
+        .food-info:nth-child(1){
+            margin-left: 0px;
+        }
+        .food-info:nth-child(2){
+            margin-left: 200px;
+        }
+        .food-info:nth-child(3){
+            margin-top: 350px;
+            margin-left:-200px;
+        }
+        .food-info:nth-child(4){
+            margin-top: 350px;
+            margin-left: 200px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="canteen-logo">
+                <h1>AIR <samp>CANTEEN</samp></h1>
+            </div>
+            <div class="header-ele">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contect</a></li>
+                </ul>
+            </div>
+            <div class="sign">
+                <form action="sign .html">
+                <button type="submit">
+               Sign
+                </button>
+                </form>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-el">
+            <div class="main-ele">
+                <h1>
+                    it's not just Food,It's an Exprience.
+                </h1> 
+                <div class="but">
+                <form action="MENU.HTML">
+                <button id="view">View Menu</button>
+                </form>
+                <button>Book a table</button>
+                </div>
+             </div>
+            <div class="main-ele"><img src="pngwing.com (2).png" alt=""></div>
+            </div>
+            <div class="food">
+                <div class="food-info">
+                    <img src="—Pngtree—fast food big ham burger_8648590.png" alt="">
+                    <div class="food-ele">
+                        <h1>fast food big ham burger</h1>
+                        <div class="price">
+                            <h5>₹30</h5>
+                            <div class="cart"><img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-info">
+                    <img src="image-from-rawpixel-id-8543711-original.png" alt="">
+                    <div class="food-ele">
+                        <h1>food delicious burger</h1>
+                        <div class="price">
+                            <h5>₹40</h5>
+                            <div class="cart"><img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-info">
+                    <img src="image-from-rawpixel-id-9778339-original.png" alt="">
+                    <div class="food-ele">
+                        <h1>food burger sauce</h1>
+                        <div class="price">
+                            <h5>₹35</h5>
+                            <div class="cart"><img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-info">
+                    <img src="image-from-rawpixel-id-12047208-original.png" alt="">
+                    <div class="food-ele">
+                        <h1>cheese pizza gourmet fast</h1>
+                        <div class="price">
+                            <h5>₹50</h5>
+                            <div class="cart"><img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="food-info">
+                    <img src="C:\Users\Admin\OneDrive\Desktop\Canteen Management\—Pngtree—fast food big ham burger_8648590.png" alt="">
+                    <div class="food-ele">
+                        <h1>fast food big ham burger</h1>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+            <div class="footer">
+               <h3>For Complain:- <samp> <a href="tel:6388279434">6388279434</a></samp></h3>
+               <h3>Help:- <samp>indrajeetmrj@gmail.com</samp></h3>
+               <h3>Visit on my website:- <samp>https://bansalcanteen.com</samp> </h3>
+            </div>
+        </div>   
+      </div>
+    </div>
+</body>
+</html>
