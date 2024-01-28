@@ -6,26 +6,29 @@
     <title>Document</title>
     <style>
         *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
         }
         body{
             height: 100vh;
             width: 100%;
-            background: black;
             padding: 50px;
+            background: black;
         }
         .container{
-            height: 140vh;
+            height: 130vh;
             width: 100%;
             background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
-            border: 2px solid wheat;
+            background-size: cover;
+            padding: 50px;
             border-radius: 15px;
+            border: 2px solid #fff;
             display: grid;
             place-items: center;
         }
         .canteen-logo{
+            /* outline: 2px solid #e10f0f; */
             height: 40px;
             width: 310px;
             align-items: center;
@@ -47,7 +50,6 @@
         .header{
             height: 80px;
             width: 100%;
-            margin-top: 50px;
             padding: 0px 30px;
             display: flex;
             flex-direction: row;
@@ -87,20 +89,41 @@
             height: 25px;
         }
         form{
-            height: 500px;
+            height: 450px;
             width: 400px;
+            background: #494949;
             background: transparent;
-            box-shadow: inset 0px 0px 10px #7c7c7c;
+            backdrop-filter: blur(10px);
             border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-content: space-between;
-            flex-direction: column;
-            padding: 100px 30px;
+            box-shadow: inset 0px 0px 10px #7c7c7c;
+            display: grid;
+            place-items: center;
+            padding: 20px;
         }
-        form img{
-            height: 80px;
+        input,button{
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+            background: transparent;
+            box-shadow: inset 0px 0px 5px #4c4b4b;
+            border: none;
+            font-weight: 400x;
+            padding: 0px 20px;
+            color:#fff;
+            font-size: 14px;
+            outline: none;
+        }
+        input::placeholder{
+            color: #ff0000;
+        }
+        button{
+            width: 100px;
+            background: #ff0000;
+            color: #000;
+            cursor: pointer;
+        }
+        img{
+            height: 100px;
         }
         form .icon{
             height: 50px;
@@ -109,7 +132,6 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            cursor: pointer;
         }
         form .icon img{
             height: 30px;
@@ -119,27 +141,6 @@
         }
         form .icon img:nth-child(3){
             height: 40px;
-        }
-        input,button{
-            height: 40px;
-            width: 200px;
-            border-radius: 20px;
-            padding: 0px 20px;
-            background: transparent;
-            border: none;
-            box-shadow: inset 0px 0px 5px #4c4b4b;
-            color:#fff;
-            outline: none;
-            font-size: 14px;
-        }
-        input::placeholder{
-            color: #e10f0f;
-        }
-        button{
-            width: 100px;
-            background: #e10f0f;
-            color: #000;
-            cursor: pointer;
         }
         .footer{
             height: 150px;
@@ -157,14 +158,14 @@
             color: #e10f0f;
             text-decoration: none;
         }
-        @media (max-width:600px) {
+        @media (max-width:360px) {
             form{
             height: 500px;
             width: 300px;
            
         }
         .container{
-            height: 120vh;
+            height: 100vh;
             width: 100%;
             padding: 10px;
             border-radius: 15px;
@@ -181,6 +182,9 @@
             body{
                 padding: 10px;
             }
+            .container{
+                height: 140vh;
+            }
             .canteen-logo{
                 margin-top: 20px;
             }
@@ -194,10 +198,10 @@
             margin-left: 210px;
         }
         form{
-            margin-left: -20px;
+            margin-left: -10px;
         }
         .footer{
-            margin-left: -52px;
+            margin-left: -51px;
         }
     }
     </style>
@@ -223,11 +227,13 @@
                 </div>
             </div>
         </div>
-        <form action="home-page.html">
+        <form action="login.html">
             <img src="avatar.png" alt="">
-            <input type="email" placeholder="Email id" required>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email id " required>
             <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <input type="password" placeholder="Conform Password" required>
+            <button type="submit"> Sign In</button>
             <div class="icon">
                 <img src="facebook.png" alt="">
                 <img src="google.png" alt="">
