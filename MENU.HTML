@@ -44,7 +44,7 @@
         }
         .canteen-logo h1{
             color: #fff;
-            font-size: 60px;
+            font-size: 30px;
             margin-top: -50px;
             margin-left: -90px;
         }
@@ -205,6 +205,19 @@
             margin-top: -80px;
             margin-left: 0px;
         }
+        .footer{
+            padding:10px 50px;
+            color: #fff;
+            font-size: 15px;
+            border-top: 2px solid #fff;
+        }
+        .footer samp{
+            color: #e10f0f;
+        }
+        .footer samp a{
+            color: #e10f0f;
+            text-decoration: none;
+        }
         @media (max-width:500px) {
             body{
                 padding: 20px;
@@ -241,8 +254,33 @@
         }   
         .menu-items .menu-el:nth-child(2){
             height: 600px;
-        }    
-        }
+        } 
+       }
+
+        @media (max-width:360px) {
+            .container {
+               height: 500vh;
+               width: 350px;
+            }
+            .header{
+                margin-left:-35px;
+                height: 150px;
+            }
+            .canteen-logo{
+                width: 200px;
+                margin-left: 50px;
+            }
+            .menu-items .menu-el:nth-child(2){
+                 padding:0;
+                margin-left: 10px;
+            }
+            body{
+                padding: 20px 5px;
+            }
+            .order .cart-el{
+                margin-left: 210px;
+            }
+        }   
     </style>
 </head>
 <body>
@@ -253,7 +291,7 @@
             </div>
             <div class="header-ele">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">menu</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contect</a></li>
@@ -262,7 +300,7 @@
             <div class="order">
                 <a href="#">My order</a>
                 <div class="cart-el">
-                    <img src="003-shopping-cart.png" alt="">
+                    <a href="cart.html"><img src="003-shopping-cart.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -365,7 +403,7 @@
                          <img src="Filipino cuisine Fried noodles.png" alt="" class="Noodles">
                         <h2 class="food-Name">Filipino cuisine Fried noodles</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹35</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -375,7 +413,7 @@
                          <img src="Rice noodle.png" alt="" class="Noodles">
                         <h2 class="food-Name">Rice noodle</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹55</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -385,7 +423,7 @@
                          <img src="Pancit Fried noodles.png" alt="" class="Noodles">
                         <h2 class="food-Name">Pancit Fried noodles</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹35</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -395,7 +433,7 @@
                          <img src="Pasta salad Bolognese sauce Italian cuisine Spaghetti.png" alt="" class="Noodles">
                         <h2 class="food-Name">Pasta salad Bolognese</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹60</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -410,7 +448,7 @@
                          <img src="Cupcake illustration.png" alt="" class="ice">
                         <h2 class="food-Name">Cupcake illustration</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹25</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -420,7 +458,7 @@
                          <img src="Ice Cream Cones.png" alt="" class="ice">
                         <h2 class="food-Name">Ice Cream Cones</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹20</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -430,7 +468,7 @@
                          <img src="Ice cream Sundae Gelato Frozen yogurt.png" alt="" class="ice">
                         <h2 class="food-Name">Ice cream Sundae Gelato Frozen yogurt</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹50</h5>
                             <div class="cart-el">
                                 <img src="003-shopping-cart.png" alt="">
                             </div>
@@ -440,7 +478,7 @@
                          <img src="Sundae Chocolate ice cream.png" alt="" class="ice">
                         <h2 class="food-Name">Sundae Chocolate ice cream</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹40</h5>
                             <div class="cart-el">
                               <img src="003-shopping-cart.png" alt="">
                              </div>
@@ -455,7 +493,7 @@
                          <img src="Blue Pepsi can,.png" alt="" class="cold">
                         <h2 class="food-Name">Blue Pepsi can</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹50</h5>
                             <div class="cart-el">
                                  <img src="003-shopping-cart.png" alt=""></div>
                         </div>
@@ -464,7 +502,7 @@
                          <img src="Coca-Cola.png" alt="" class="cold">
                         <h2 class="food-Name">Coca-Cola</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹40</h5>
                             <div class="cart-el">
                                  <img src="003-shopping-cart.png" alt=""></div>
                         </div>
@@ -473,7 +511,7 @@
                          <img src="Dew.png" alt="" class="cold">
                         <h2 class="food-Name">Dew</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹45</h5>
                             <div class="cart-el">
                                  <img src="003-shopping-cart.png" alt=""></div>
                         </div>
@@ -482,12 +520,17 @@
                          <img src="Sprite.png" alt="" class="cold">
                         <h2 class="food-Name">Sprite</h2>
                         <div class="cart">
-                            <h5>₹30</h5>
+                            <h5>₹45</h5>
                             <div class="cart-el">
                                  <img src="003-shopping-cart.png" alt=""></div>
                         </div>
                      </div>
                </div>
+               <div class="footer">
+                <h3>For Complain:- <samp> <a href="tel:6388279434">6388279434</a></samp></h3>
+                <h3>Help:- <samp>indrajeetmrj@gmail.com</samp></h3>
+                <h3>Visit on my website:- <samp>https://bansalcanteen.com</samp> </h3>
+             </div>
                </div>
          </div>
     </div>
