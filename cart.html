@@ -116,7 +116,12 @@
             font-weight: 600;
             border: none;
             cursor: pointer;
-
+        }
+        #order{
+            height: 50px;
+            background: linear-gradient(to top left ,red,rgb(164, 33, 33),red);
+            border: none;
+            cursor: pointer;
         }
         @media (max-width:500px) {
             body{
@@ -145,6 +150,14 @@
             width: 250px;
         }
     }
+    @media (max-width:500px){
+        .order .cart-el{
+            margin-left: 180px;
+        }
+        .header{
+            height: 150px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -155,7 +168,7 @@
             </div>
             <div class="header-ele">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">menu</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contect</a></li>
@@ -173,7 +186,9 @@
             <div class="main-ele">
                 <div class="order-b">
                     <button type="submit">Remove</button>
-                    <button type="submit">Order now</button>
+                    <form action="Paymet-section.html">
+                    <button type="submit" id="order">Order now</button>
+                    </form>
                 </div>
             </div>
         </div>
