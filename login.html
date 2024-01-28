@@ -17,14 +17,74 @@
             padding: 50px;
         }
         .container{
-            height: 100vh;
+            height: 140vh;
             width: 100%;
             background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
-            
             border: 2px solid wheat;
             border-radius: 15px;
             display: grid;
             place-items: center;
+        }
+        .canteen-logo{
+            height: 40px;
+            width: 310px;
+            align-items: center;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .canteen-logo h1{
+            color: #fff;
+            font-size: 30px;
+            margin-top: -50px;
+            margin-left: -90px;
+        }
+        .canteen-logo h1 samp{
+             font-size: 30px;
+            color: #e10f0f;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            margin-top: 50px;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-ele ul{
+            width: 300px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 17px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order{
+            height: 40px;
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .order a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order .cart-el{
+            height: 40px;
+            width: 40px;
+            background: #e10f0f;
+            border-radius: 10px 10px 20px 10px;
+            padding: 6px;
+        }
+        .cart-el a img{
+            height: 25px;
         }
         form{
             height: 500px;
@@ -81,6 +141,19 @@
             color: #000;
             cursor: pointer;
         }
+        .footer{
+            padding:10px 50px;
+            color: #fff;
+            font-size: 15px;
+            border-top: 2px solid #fff;
+        }
+        .footer samp{
+            color: #e10f0f;
+        }
+        .footer samp a{
+            color: #e10f0f;
+            text-decoration: none;
+        }
         @media (max-width:600px) {
             form{
             height: 500px;
@@ -88,7 +161,7 @@
            
         }
         .container{
-            height: 100vh;
+            height: 120vh;
             width: 100%;
             padding: 10px;
             border-radius: 15px;
@@ -101,10 +174,52 @@
             background: black;
         }
         }
+        @media (max-width:360px) {
+            body{
+                padding: 10px;
+            }
+            .canteen-logo{
+                margin-top: 20px;
+            }
+        .header{
+            height: 150px;
+            width: 100%;
+           margin-left: -45px;
+           flex-direction: column;
+        }
+        .cart-el{
+            margin-left: 210px;
+        }
+        form{
+            margin-left: -20px;
+        }
+        .footer{
+            margin-left: -12px;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="header">
+            <div class="canteen-logo">
+                <h1 class="logon">AIR <samp>CANTEEN</samp></h1>
+            </div>
+            <div class="header-ele">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contect</a></li>
+                </ul>
+            </div>
+            <div class="order">
+                <a href="#">My order</a>
+                <div class="cart-el">
+                    <a href="cart.html"><img src="003-shopping-cart.png" alt=""></a>
+                </div>
+            </div>
+        </div>
         <form action="home-page.html">
             <img src="avatar.png" alt="">
             <input type="email" placeholder="Email id" required>
@@ -116,6 +231,11 @@
                 <img src="linkedin.png" alt="">
             </div>
         </form>
+        <div class="footer">
+            <h3>For Complain:- <samp> <a href="tel:6388279434">6388279434</a></samp></h3>
+            <h3>Help:- <samp>indrajeetmrj@gmail.com</samp></h3>
+            <h3>Visit on my website:- <samp>https://bansalcanteen.com</samp> </h3>
+         </div>
     </div>
 </body>
 </html>
