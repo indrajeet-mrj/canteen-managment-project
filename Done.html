@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            padding: 50px;
+            background: #000;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+        }
+        .canteen-logo{
+            height: 40px;
+            width: 210px;
+            align-items: center;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .canteen-logo h1{
+            color: #fff;
+            font-size: 30px;
+        }
+        .canteen-logo h1 samp{
+             font-size: 30px;
+            color: #e10f0f;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-ele ul{
+            width: 300px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 17px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order{
+            height: 40px;
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .order a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order .cart-el{
+            height: 40px;
+            width: 40px;
+            background: #e10f0f;
+            border-radius: 10px 10px 20px 10px;
+            padding: 6px;
+        }
+        .cart-el img{
+            height: 25px;
+        }
+        .main{
+
+            height: 100%;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .thanku img{
+            height: 280px;
+
+        }
+        .thanku h2{
+            position: absolute;
+            margin-top: -160px;
+            margin-left: 60px;
+            font-size: 30px;
+        }
+        .return button{
+            background: #e10f0f;
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        @media (max-width:500px) {
+            body{
+                padding: 20px;
+        }
+        .container{
+            padding: 20px;
+        }
+        .canteen-logo h1{
+            margin-top: 20px;
+        }
+        .header{
+            height: 200px;
+            width: 100%;
+            padding: 0px 10px;
+            flex-direction: column;
+        }
+        .header-ele ul{
+            width: 250px;
+        }
+    }
+    @media (max-width:360px){
+        .order .cart-el{
+            margin-left: 180px;
+        }
+        .header{
+            height: 150px;
+        }
+        .thanku{
+            height: 300px;
+            width: 100%;
+            margin-top: 100px;
+            margin-left: -10px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="canteen-logo">
+                <h1>AIR <samp>CANTEEN</samp></h1>
+            </div>
+            <div class="header-ele">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contect</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="thanku">
+                <img src="thanku img.png" alt="">
+                <h2>Thank you !</h2>
+            </div>
+            <div class="return">
+                <form action="index.html">
+                    <button type="submit">Go to Home</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

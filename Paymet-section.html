@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: black;
+            padding: 50px;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
+            padding: 50px;
+        }
+        .canteen-logo{
+            /* outline: 2px solid #e10f0f; */
+            height: 40px;
+            width: 210px;
+            align-items: center;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .canteen-logo h1{
+            color: #fff;
+            font-size: 30px;
+        }
+        .canteen-logo h1 samp{
+             font-size: 30px;
+            color: #e10f0f;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-ele ul{
+            width: 300px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 17px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .main{
+               height: 100%;
+               width: 100%;
+               display: grid;
+               place-items: center;
+        }
+        .paymet{
+            height: 480px;
+            width: 300px;
+            background: #fff;
+            margin-top: -100px;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .upi{
+            margin-top: 25px;
+        }
+        .upi:nth-child(1){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .upi a{
+            height: 30px;
+            width: 100px;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            color: #00bfff;
+            border: 2px solid #00bfff;
+            border-radius: 5px;
+
+        }
+        .upi:nth-child(3){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+        .upi-app{
+            height: 50px;
+            width: 120px;
+            background: #cbcbcb;
+            border-radius: 8px;
+        }
+        .upi:nth-child(5) a{
+              height: 35px;
+              width: 250px;
+              border: 1px solid #00bfff;
+        }
+        .upi:nth-child(4){
+            height: 100px;
+            width: 250px;
+            color: #00bfff;
+        }
+        .ui{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .ui button{
+            background: transparent;
+            color: #00bfff;
+            border: 1px solid #00bfff;
+            border-radius: 5px;
+            height: 25px;
+            width: 80px;
+            cursor: pointer;
+        }
+        .upi:nth-child(4) input{
+            margin-top: 5px ;
+        }
+        .upi:nth-child(4) #upload{
+            width: 150px;
+            border: 1px dotted #00bfff;
+            border-radius: 8px;
+            margin-top: 5px;
+            background: transparent;
+            color: #00bfff;
+            height: 30px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+         .upi:nth-child(4) #sub{
+            height: 30px;
+            width: 100px;
+            background: transparent;
+            color: #00bfff;
+            border: 1px solid #00bfff;
+            border-radius: 8px;
+            margin-left:75px;
+            margin-top: 5px;
+            cursor: pointer;
+         }
+        .upi:nth-child(6) a{
+            height: 35px;
+           width: 250px;
+           border: none;
+    
+        }
+        .upi-app a{
+            border: none;
+        }
+        .upi-app img{
+            height: 26px;
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+        #upi-help{
+            height: 30px;
+            width: 200px;
+            margin-top: -20px;
+        }
+        .upi-help{
+            margin-left: 20px;
+        }
+        textarea{
+            height: 20px;
+            border: none;
+            color: #054ebb;
+            outline: none;
+        }
+        
+        @media (max-width:500px) {
+            body{
+            padding: 20px;
+        }
+        .container{
+            height: 100vh;
+            padding: 10px;
+        }
+        .main-el{
+            flex-direction:column;
+        }
+        .main-ele img{
+            height: 300px;
+            margin-top: -470px;
+            margin-left: 30px;
+        }
+        .main-ele h1{
+            margin-left: 50px;
+            margin-top: 380px;
+        }
+        .but{
+            margin-left: 40px;
+             /* margin-top: 400px; */
+        }
+        .header{
+            height: 100px;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+    @media (max-width:360px) {
+            body{
+                padding: 10px;
+            }
+            .canteen-logo{
+                margin-top: 20px;
+            }
+        .header{
+            height: 100px;
+            width: 100%;
+            margin-left: -20px;
+        }
+        .cart-el{
+            margin-left: 210px;
+        }
+        form{
+            margin-left: -10px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="canteen-logo">
+                <h1>AIR <samp>CANTEEN</samp></h1>
+            </div>
+            <div class="header-ele">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contect</a></li>
+                </ul>
+            </div>
+           
+        </div>
+       <div class="main">
+        <div class="paymet">
+           <div class="upi" style="color: #524e4e;"><h4>UPI/BHIM</h4>
+           <a href="#"> Change</a>
+           </div>
+           <div class="upi"><h4>Select your UPI app</h4></div>
+           <div class="upi">
+            <div class="upi-app"> <a href="https://www.bhimupi.org.in/"><img src="bhim.png" alt=""></a></div>
+            <div class="upi-app"><a href="https://www.phonepe.com/"><img src="phone pay.png" alt=""></a></div>
+            <div class="upi-app"><a href="https://pay.google.com/intl/en_in/about/"><img src="google pay.png" alt=""></a></div>
+            <div class="upi-app"><a href="https://paytm.com/"><img src="paytm.png" alt=""></a></div>
+           </div>
+            <div class="upi">
+              <div class="ui"><textarea>6388279434@paytm</textarea>
+                <button id="copy">Copy</button>
+              </div>
+                <input type="file">
+                <button id="upload">Upload Screenshot</button><br>
+                <form action="Done.html">
+                <button id="sub">Submit</button>
+                </form>
+            </div>
+           <div class="upi">
+            <a href="#">OTHER UPI APP</a>
+           </div>
+           <div class="upi upi-help"><a href="#" id="upi-help">How to pay using UPI ?</a></div>
+        </div>
+
+       </div>
+    </div>
+    <script>
+        const textarea = document.querySelector('textarea');
+        const button = document.getElementById('copy');
+        button.addEventListener("click" , async () => {
+            textarea.select();
+            await navigator.clipboard.writeText(textarea.value);
+            button.innerText ="Copyed!"
+
+            setTimeout(() =>{
+                getSelection().removeAllRanges();
+                button.innerText = "Copy";
+            },2000);
+        } 
+        )
+    </script>
+</body>
+</html>
