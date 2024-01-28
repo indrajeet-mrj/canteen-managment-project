@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Salsa&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: black;
+            padding: 50px;
+        }
+        .container{
+            height: 350vh;
+            width: 100%;
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid wheat;
+            background-image:linear-gradient(to right in oklab,oklch(57% 0.02 266) -42% -42%, oklch(0% 0.13 200) 93% 93%);
+            display: flex;
+            flex-direction: column;
+        
+        }
+        .canteen-logo{
+            /* outline: 2px solid #e10f0f; */
+            height: 40px;
+            width: 310px;
+            align-items: center;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .canteen-logo h1{
+            color: #fff;
+            font-size: 60px;
+            margin-top: -50px;
+            margin-left: -90px;
+        }
+        .canteen-logo h1 samp{
+             font-size: 30px;
+            color: #e10f0f;
+        }
+        .header{
+            height: 80px;
+            width: 100%;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-ele ul{
+            width: 300px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-size: 17px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order{
+            height: 40px;
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .order a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .order .cart-el{
+            height: 40px;
+            width: 40px;
+            background: #e10f0f;
+            border-radius: 10px 10px 20px 10px;
+            padding: 6px;
+        }
+        .menu-items{
+            height: 350px;
+            width: 100%;
+            display:flex;
+            flex-direction: column;  
+            margin-left: -50px;
+        }
+       h1{  
+            margin-left: 20px;
+            font-size:40px;
+           
+        }
+        .main{
+            margin-top: 50px;
+        }
+        .items{
+            height: 300x;
+            width: 100%;
+            border: 2px solid wheat;
+        }
+        .menu-items .menu-el:nth-child(1){
+          height: 55px;
+          width: 250px;
+          background: #e10f0f;
+          border-radius: 0px 27px 27px 0px ;
+        }
+        .menu-items .menu-el:nth-child(2){
+            height: 300px;
+            width: 100%;
+            margin-left: 50px;
+            /* border: 2px solid wheat; */
+            display: flex;
+            flex-direction: row;
+            padding: 0px 50px;
+            align-items: center;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+        .items-el{
+            height: 200px;
+            width: 150px;
+            background-color: #000000;
+            border-radius: 30px;
+            box-shadow: inset 0px 0px 8px #4c4b4b ;
+            
+        }
+        .menu-el .items-el{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .menu-el .items-el .cart{
+            height: 40px;
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px ;
+            margin-top: 0px;
+        }
+        .menu-el .items-el .cart .cart-el{
+            height: 40px;
+            width: 40px;
+            background: #e10f0f;
+            border-radius: 10px 10px 20px 10px;
+            padding: 6px;
+        }
+        .cart-el img{
+            height: 25px;
+            cursor: pointer;
+        }
+        .items-el .coffee{
+            height: 150px;
+            position: absolute;
+            margin-top: -90px;
+            margin-left: -20px;
+            aspect-ratio: 3/3;
+        }
+        .food-Name{
+            height: 40px;
+            width: 120px;
+            margin-top: 80px;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Salsa', cursive;
+        }
+        .Pizza{
+            height: 120px;
+            position: absolute;
+            margin-top: -80px;
+            margin-left: -10px;
+        }
+        .Noodles{
+            height: 120px;
+            position: absolute;
+            margin-top: -80px;
+            margin-left: -10px;
+            aspect-ratio: 3/3;
+        }
+        .ice{
+            height: 130px;
+            position: absolute;
+            margin-top: -80px;
+            margin-left: -10px;
+            aspect-ratio: 3/3;
+        }
+        .cold{
+
+            height: 130px;
+            position: absolute;
+            margin-top: -80px;
+            margin-left: 0px;
+        }
+        @media (max-width:500px) {
+            body{
+                padding: 20px;
+            }
+            .canteen-logo h1{
+            margin-top: 20px;
+        }
+            .header{
+            height: 200px;
+            width: 100%;
+            flex-direction: column;
+        }
+            .menu-items .menu-el:nth-child(2){
+    
+                padding: 0px 10px;
+                margin-left: 15px;
+                flex-wrap: wrap;
+            }
+            .container{
+                height: 400vh;
+                padding:20px;
+            }
+            .main{
+            height: 300vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-items{
+            height: 700px;
+            justify-content: space-between;
+            margin-left: -20px;
+        }   
+        .menu-items .menu-el:nth-child(2){
+            height: 600px;
+        }    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="canteen-logo">
+                <h1 class="logon">AIR <samp>CANTEEN</samp></h1>
+            </div>
+            <div class="header-ele">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contect</a></li>
+                </ul>
+            </div>
+            <div class="order">
+                <a href="#">My order</a>
+                <div class="cart-el">
+                    <img src="003-shopping-cart.png" alt="">
+                </div>
+            </div>
+        </div>
+           <div class="main">
+              <div class="menu-items">
+                 <div class="menu-el"><h1>Coffee</h1></div>
+                 <div class="menu-el">
+                      <div class="items-el">
+                         <img src="pngegg.png" alt="" class="coffee">
+                        <h2 class="food-Name">Black Coffee</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="items-el">
+                         <img src="pngegg (1).png" alt="" class="coffee">
+                        <h2 class="food-Name">Instant coffee Latte Cafe Milk</h2>
+                        <div class="cart">
+
+                            <h5>₹35</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="items-el">
+                         <img src="hot coffee.png" alt="" class="coffee">
+                        <h2 class="food-Name">Espresso Turkish coffee</h2>
+                        <div class="cart">
+                            <h5>₹20</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="items-el">
+                         <img src="red.png" alt="" class="coffee">
+                        <h2 class="food-Name">Red eye</h2>
+                        <div class="cart">
+                            <h5>₹25</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                      </div>
+                </div>
+             </div>
+             <div class="menu-items">
+                <div class="menu-el"><h1>Pizza</h1></div>
+                <div class="menu-el">
+                     <div class="items-el">
+                        <img src="Ham Sushi Mozzarella, pizza.png" alt="" class="Pizza">
+                        <h2 class="food-Name">Ham Sushi Mozzarella, pizza</h2>
+                        <div class="cart">
+                            <h5>₹199</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Pepperoni pizza.png" alt="" class="Pizza">
+                        <h2 class="food-Name">Pepperoni pizza</h2>
+                        <div class="cart">
+                            <h5>₹159</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Pizza Take-out Kebab.png" alt="" class="Pizza">
+                        <h2 class="food-Name">Pizza Take-out Kebab</h2>
+                        <div class="cart">
+                            <h5>₹249</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Pizza with tomatos, New York-style pizza.png" alt="" class="Pizza">
+                        <h2 class="food-Name">Pizza with tomatos, New York-style pizza</h2>
+                        <div class="cart">
+                            <h5>₹175</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+               </div>
+             </div>
+               <div class="menu-items">
+                <div class="menu-el"><h1>Noodles</h1></div>
+                <div class="menu-el">
+                     <div class="items-el">
+                         <img src="Filipino cuisine Fried noodles.png" alt="" class="Noodles">
+                        <h2 class="food-Name">Filipino cuisine Fried noodles</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Rice noodle.png" alt="" class="Noodles">
+                        <h2 class="food-Name">Rice noodle</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Pancit Fried noodles.png" alt="" class="Noodles">
+                        <h2 class="food-Name">Pancit Fried noodles</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Pasta salad Bolognese sauce Italian cuisine Spaghetti.png" alt="" class="Noodles">
+                        <h2 class="food-Name">Pasta salad Bolognese</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+               </div>
+               </div>
+               <div class="menu-items">
+                <div class="menu-el"><h1>Ice-Crems</h1></div>
+                <div class="menu-el">
+                     <div class="items-el">
+                         <img src="Cupcake illustration.png" alt="" class="ice">
+                        <h2 class="food-Name">Cupcake illustration</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Ice Cream Cones.png" alt="" class="ice">
+                        <h2 class="food-Name">Ice Cream Cones</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Ice cream Sundae Gelato Frozen yogurt.png" alt="" class="ice">
+                        <h2 class="food-Name">Ice cream Sundae Gelato Frozen yogurt</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                <img src="003-shopping-cart.png" alt="">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Sundae Chocolate ice cream.png" alt="" class="ice">
+                        <h2 class="food-Name">Sundae Chocolate ice cream</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                              <img src="003-shopping-cart.png" alt="">
+                             </div>
+                        </div>
+                     </div>
+               </div>
+               </div>
+               <div class="menu-items">
+                <div class="menu-el"><h1>Cold Drinks</h1></div>
+                <div class="menu-el">
+                     <div class="items-el">
+                         <img src="Blue Pepsi can,.png" alt="" class="cold">
+                        <h2 class="food-Name">Blue Pepsi can</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                 <img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Coca-Cola.png" alt="" class="cold">
+                        <h2 class="food-Name">Coca-Cola</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                 <img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Dew.png" alt="" class="cold">
+                        <h2 class="food-Name">Dew</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                 <img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                     </div>
+                     <div class="items-el">
+                         <img src="Sprite.png" alt="" class="cold">
+                        <h2 class="food-Name">Sprite</h2>
+                        <div class="cart">
+                            <h5>₹30</h5>
+                            <div class="cart-el">
+                                 <img src="003-shopping-cart.png" alt=""></div>
+                        </div>
+                     </div>
+               </div>
+               </div>
+         </div>
+    </div>
+</body>
+</html>
